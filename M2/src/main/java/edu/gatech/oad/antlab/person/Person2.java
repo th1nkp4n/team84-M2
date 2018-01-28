@@ -1,3 +1,4 @@
+import java.util.Collections
 package edu.gatech.oad.antlab.person;
 
 /**
@@ -5,7 +6,7 @@ package edu.gatech.oad.antlab.person;
  *  returns their name and a
  *  modified string 
  *
- * @author Bob
+ * @author Meha Kumar
  * @version 1.1
  */
 public class Person2 {
@@ -31,6 +32,9 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
+        int l = input.length();
+        int[] arr = new int[l];
+        for (int i)
 	  return null;
 	}
 	/**
