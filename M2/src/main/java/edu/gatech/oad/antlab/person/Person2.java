@@ -1,6 +1,6 @@
-import java.util.Collections
 package edu.gatech.oad.antlab.person;
-
+import java.util.List;
+import java.util.ArrayList;
 /**
  *  A simple class for person 2
  *  returns their name and a
@@ -33,9 +33,16 @@ public class Person2 {
 	private String calc(String input) {
 	  //Person 2 put your implementation here
         int l = input.length();
-        int[] arr = new int[l];
-        for (int i)
-	  return null;
+        List arr = new ArrayList[l];
+        for (int i = 0; i < arr.length; i++) {
+            arr.add(i);
+        }
+        Collections.shuffle(arr);
+        String str = "";
+        for (int elem : arr) {
+            str += input.charAt(elem);
+        }
+	  return str;
 	}
 	/**
 	 * Return a string rep of this object
@@ -48,4 +55,10 @@ public class Person2 {
 	public String toString(String input) {
 	  return name + calc(input);
 	}
+
+    public static void main(String[] args) {
+        String toshuf = "hello";
+        String shuf = calc(toshuf);
+        System.out.println(shuf);
+    }
 }
