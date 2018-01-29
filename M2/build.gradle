@@ -8,10 +8,12 @@ apply plugin: 'pmd'
 
 apply plugin: 'application'
 
-
+compileJava {
+sourceCompatibility='1.8'
+}
 
 dependencies {
-	compile files(lib/resources.jar)
+	compile files("lib/resources.jar")
 }
 
 version = '1.0'
