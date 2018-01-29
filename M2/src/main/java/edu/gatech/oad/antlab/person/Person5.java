@@ -30,16 +30,17 @@ public class Person5 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 5 put your implementation here
+		//Person 5 put your implementation here
 		char[] shift = input.toCharArray();
-		int length = input.length();
-		String result = "";
-		for (int i = 2; i < length; i++) {
-			result += shift[i];
+		int size = input.length();
+		char[] result = new char[size];
+		for (int i = 2; i < size; i++) {
+			result[i - 2] = shift[i];
 		}
-		result += shift[0];
-		result += shift[1];
-	  return result;
+		result[size - 2] = shift[0];
+		result[size - 1] = shift[1];
+		String answer = new String(result);
+		return answer;
 	}
 	
 	/**
