@@ -1,0 +1,35 @@
+defaultTasks '<task>'
+
+apply plugin: 'java'
+
+apply plugin: 'findbugs'
+
+apply plugin: 'pmd'
+
+apply plugin: 'application'
+
+task runcode(dependsOn:build)<< {
+   mainClassName = "edu.gatech.oad.antlab.pkg1.AntLabMain"
+}
+
+jar{
+  baseName = 'dropTheNibble'
+  version = '0.0.1'
+}
+
+dependencies {
+	compileJava(mainClassName)
+}
+
+version = '1.0'
+
+jar {
+	manifest {
+		attributes("<attribute>": "______",
+        		   "<attribute>": "_______")
+	}
+}
+
+repositories {
+   mavenCentral()
+}
