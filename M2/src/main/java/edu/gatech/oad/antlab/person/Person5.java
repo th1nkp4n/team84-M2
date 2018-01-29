@@ -32,8 +32,8 @@ public class Person5 {
 	private String calc(String input) {
 	  //Person 5 put your implementation here
 		char[] shift = input.toCharArray();
-		length = input.length();
-		String result = '';
+		int length = input.length();
+		String result = "";
 		for (int i = 2; i < length; i++) {
 			result += shift[i];
 		}
